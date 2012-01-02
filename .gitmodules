@@ -1,0 +1,18 @@
+[submodule "vim/.vim/bundle/gist-vun"]
+	path = vim/.vim/bundle/gist-vun
+	url = https://github.com/mattn/gist-vim.git
+[submodule "vim/.vim/bundle/nerdcommenter"]
+	path = vim/.vim/bundle/nerdcommenter
+	url = https://github.com/scrooloose/nerdcommenter.git
+[submodule "vim/.vim/bundle/nerdtree"]
+	path = vim/.vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree.git
+[submodule "vim/.vim/bundle/pyflakes"]
+	path = vim/.vim/bundle/pyflakes
+	url = https://github.com/kevinw/pyflakes-vim
+[submodule "vim/.vim/bundle/vim-markdown"]
+	path = vim/.vim/bundle/vim-markdown
+	url = https://github.com/plasticboy/vim-markdown.git
+[submodule "vim/.vim/bundle/vim-surround"]
+	path = vim/.vim/bundle/vim-surround
+	url = https://github.com/tpope/vim-surround.git
