@@ -65,3 +65,13 @@ map <C-J> <C-W>j<C-W>
 map <C-K> <C-W>k<C-W>
 map <C-H> <C-W>h<C-W>
 map <C-L> <C-W>l<C-W>
+
+" gist stuff
+let g:gist_detect_filetype = 1
+if has("unix")
+  let s:uname = system("uname")
+  if s:uname == "Darwin\n"
+    " Do Mac stuff here
+    let g:gist_clip_command = 'pbcopy'
+  endif
+endif

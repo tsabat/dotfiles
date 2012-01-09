@@ -1,1 +1,1 @@
-.vim
+spell/*
