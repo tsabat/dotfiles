@@ -75,3 +75,7 @@ if has("unix")
     let g:gist_clip_command = 'pbcopy'
   endif
 endif
+
+" ctlp
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_working_path_mode = 2
