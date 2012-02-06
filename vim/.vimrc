@@ -79,3 +79,15 @@ endif
 " ctlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
+
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/python_full_stack/source/*   " for Linux/MacOSX
+let g:ctrlp_custom_ignore = '*/python_full_stack/source/*'
+let g:ctrlp_open_new_file = 'h'
+
+" backup
+set directory=/tmp//
+
+" paste toggle
+" http://amix.dk/blog/post/19083
+nmap <Leader>tt :set paste!<BAR>:set paste?<CR>
+
