@@ -7,3 +7,6 @@ git submodule update --init
 git config --global user.name "Timothy Sabat"
 git config --global user.email timothy.sabat@gmail.com
 git config --global core.editor 'vim -f'
+
+wget --no-check-certificate https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | sh
+chsh -s `which zsh`
