@@ -42,7 +42,7 @@ colorscheme railscasts
 set mouse=a
 
 " NERDTree configuration
-let NERDTreeIgnore=['\.rbc$', '\~$']
+let NERDTreeIgnore=['\.rbc$', '\.pyc$', '\~$']
 map <Leader>n :NERDTreeToggle<CR>
 
 " Toggle highlight search
@@ -50,9 +50,13 @@ map <Leader>z :set hls!<CR>
 
 " Thorfile, Rakefile, Vagrantfile and Gemfile are Ruby
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
+au BufRead,BufNewFile *.scss set filetype=scss
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
-au FileType python  set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=79
+au FileType python  set tabstop=4 shiftwidth=4 softtabstop=4 textwidth=0
+
+" ruby filetypes
+autocmd FileType ruby setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
@@ -79,6 +83,7 @@ endif
 " ctlp
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_working_path_mode = 2
+let g:ctrlp_arg_map = 1
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/python_full_stack/source/*   " for Linux/MacOSX
 let g:ctrlp_custom_ignore = '*/python_full_stack/source/*'
@@ -90,4 +95,12 @@ set directory=/tmp//
 " paste toggle
 " http://amix.dk/blog/post/19083
 nmap <Leader>tt :set paste!<BAR>:set paste?<CR>
+
+"autocmd BufWritePre * :call <SID>StripWhite()
+fun! <SID>StripWhite()
+    %s/[ \t]\+$//ge
+    %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
+endfun
+
+"json
 

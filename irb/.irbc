@@ -1,0 +1,7 @@
+require ‘irb/completion’
+require 'irb/ext/save-history'
+
+# where history is saved
+IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb-history"
+# how many lines to save
+IRB.conf[:SAVE_HISTORY] = 5000

@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/Users/timsabat/dev/config/sync_ssh_keys/.git'
 let g:netrw_dirhist_2='/Users/timsabat/boxes/python_full_stack/source/brobambino'
 let g:netrw_dirhist_3='/Users/timsabat/Tinkerbox/lib/views'
+let g:netrw_dirhist_4='/Users/timsabat/boxes/anweb/.git'
+let g:netrw_dirhist_5='/Users/timsabat/dotfiles'
+let g:netrw_dirhist_6='/Users/timsabat/Sites/Tinkerbox'
