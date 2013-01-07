@@ -14,14 +14,15 @@ set encoding=utf-8
 
 " Whitespace stuff
 set nowrap
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
 set autoindent          " always set autoindenting on
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
+set foldlevel=1
 
 " search stuff
 " http://amix.dk/blog/post/19083
@@ -96,11 +97,16 @@ set directory=/tmp//
 " http://amix.dk/blog/post/19083
 nmap <Leader>tt :set paste!<BAR>:set paste?<CR>
 
-"autocmd BufWritePre * :call <SID>StripWhite()
-fun! <SID>StripWhite()
-    %s/[ \t]\+$//ge
-    %s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
-endfun
+"autocmd BufWritePre *{rb,erb} call StripWhite()
+"function! StripWhite()
+    "%s/[ \t]\+$//ge
+    "%s!^\( \+\)\t!\=StrRepeat("\t", 1 + strlen(submatch(1)) / 8)!ge
+"endfunction
 
 "json
 
+"set rnu
+"au InsertEnter * :set nu
+"au InsertLeave * :set rnu
+"au FocusLost * :set nu
+"au FocusGained * :set rnu
